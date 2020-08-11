@@ -1,4 +1,5 @@
-Project Idea
+Project Idea:
+
 A database that keeps track of all the stock investments the user owns.
 
 User Stories
