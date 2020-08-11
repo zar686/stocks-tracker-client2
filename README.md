@@ -14,7 +14,7 @@ As a user, I should be able to create a list of stocks to invest in
 
 As a user, I should be able to update the list of stocks to invest in
 
-As a user, I should be able to delete stocks from the list of stocks to invest in
+As a user, I should be able to delete stocks from the list of stocks
 
 WIREFRAMES
 https://imgur.com/a/GKwrwXP
