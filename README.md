@@ -3,6 +3,7 @@ Project Idea:
 A database that keeps track of all the stock investments the user owns.
 
 User Stories
+
 As a user, I should be able to sign up for the app
 
 As a user, I should be able to sign in the app
