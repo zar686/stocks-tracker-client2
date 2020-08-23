@@ -19,13 +19,11 @@
     </head>
 
     <body>
-      <h1>Stock Portfolio</h1>
+      <h1>Stocks Tracker</h1>
 
       <p id="message"></p>
 
       <div class="unauthenticated container" id="unauthenticated">
-        <!-- <div class="create-account">create an account</div>
-        <div class="already-have-account">sign in</div> -->
 
         <!-- sign up form and button -->
         <div class="column">
@@ -40,44 +38,45 @@
       <!-- sign in form and button -->
       <div class="column">
         <form class="sign-in unauth-form" id="sign-in">
-        <input name="credentials[email]" placeholder="e-mail" type="text" class="input">
+        <input name="credentials[email]" placeholder="E-mail" type="text" class="input">
         <input name="credentials[password]" placeholder="password" type="password" class="input"><br>
         <button type="submit">SIGN IN</button>
         </form>
       </div>
 
-    </div>
+      </div>
 
     <div class="authenticated" id="authenticated">
       <div class="auth-btns">
 
         <!-- change password form and button -->
         <form class="change-password btn" id="change-password">
-          <input name="passwords[old]" placeholder="old password" type="password" class="input-change-password">
-          <input name="passwords[new]" placeholder="new password" type="password" class="input-change-password">
-          <button type="submit">CHANGE PASSWORD</button>
+          <br /><input name="passwords[old]" placeholder="old password" type="password" class="input-change-password">
+          <br /><input name="passwords[new]" placeholder="new password" type="password" class="input-change-password">
+          <br /><button type="submit">CHANGE PASSWORD</button>
         </form>
 
         <!-- sign out button -->
         <form class="sign-out btn" id="sign-out">
-          <button type="submit">SIGN OUT</button>
+          <br /><button type="submit">SIGN OUT</button>
         </form>
 
       </div>
+
       <div class="column">
         <form class="create-stock" id="create-stock">
           <input name="stock[name]" placeholder="Stock name (eg. Amazon)" type="text" class="input"><br>
           <input name="stock[symbol]" placeholder="Stock symbol (eg. AMZN)" type="text" class="input"><br>
           <input name="stock[quantity]" placeholder="Shares Bought (eg. 10)" type="number" class="input"><br>
-          <input name="stock[price]" placeholder="Price per share (eg. $2,500)" type="number" class="input"><br>
-          <input name="stock[reason]" placeholder="Why are you buying this stock? (eg. Jeff Bezos is dope)" type="text" class="input"><br>
-          <button id="add-stock" type="submit">add new stock</button>
+          <input name="stock[price]" placeholder="Price per share (eg. 2,500)" type="number" class="input"><br>
+          <input name="stock[reason]" placeholder="Rate this stock? (eg. A or F)" type="text" class="input"><br>
+          <button id="add-stock" type="submit">Add a new stock</button>
         </form>
       </div>
 
       <main>
         <div class="column">
-          <button id="index-stocks">see all stocks</button>
+          <button id="index-stocks">All my stocks</button>
           <div id="content" class="content"></div>
         </div>
       </main>

@@ -49,7 +49,7 @@ const destroyStockFailure = () => {
 const updateStockSuccess = (stockId) => {
   $('#message').text('Stock updated!')
 
-  $(`#updatePlant-${stockId}`).modal('hide')
+  $(`#updateStock-${stockId}`).modal('hide')
   // Removing show class triggers fade out transition
   $('.modal-backdrop').removeClass('show')
   return new Promise(resolve => setTimeout(() => {

@@ -2,20 +2,19 @@
   {{log stock}}
   <section class="stock-list" data-id="{{stock.id}}">
 
-    <h5>
-      {{stock.name}}
-    </h5>
-  <h6><i>{{stock.symbol}}</i></h6>
-    <h6>quantity: {{stock.quantity}}</h6>
-    <h6>price: {{stock.price}}</h6>
-    <h6>reason: {{stock.reason}}</h6>
 
-<!-- Update Plant Button - Trigger Modal -->
-    <button class="update-plant" type="button" data-id="{{plant._id}}" data-toggle="modal" data-target="#updatePlant-{{plant._id}}">update</button>
+    <h5>STOCK: {{stock.name}}</h5>
+    <h6>SYMBOL: {{stock.symbol}}</h6>
+    <h6>QUANTITY: {{stock.quantity}}</h6>
+    <h6>PRICE: {{stock.price}}</h6>
+    <h6>REASON: {{stock.reason}}</h6>
+
+<!-- Update Stock Button - Trigger Modal -->
+    <button class="update-stock" type="button" data-id="{{stock._id}}" data-toggle="modal" data-target="#updateStock-{{stock._id}}">update</button>
 
 <!-- Modal -->
 
-    <div class="modal fade" id="updateStock-{{stock._id}}" tabindex="-1" role="dialog" aria-labelledby="updatePlantLabel" aria-hidden="true">
+    <div class="modal fade" id="updateStock-{{stock._id}}" tabindex="-1" role="dialog" aria-labelledby="updateStockLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -53,8 +52,8 @@
     </div>
   </div>
 
-<!-- Remove Plant Button -->
-  <button type="button" class="btn btn-danger destroy-stock" data-id="{{stock._id}}">remove</button>
+<!-- Remove Stock Button -->
+  <button type="button" class="btn btn-danger destroy-stock" data-id="{{stock._id}}">REMOVE</button>
 
   </section>
 

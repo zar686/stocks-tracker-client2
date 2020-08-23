@@ -25,7 +25,7 @@ const indexStocks = function () {
     url: config.apiUrl + '/stocks',
     method: 'GET',
     data: {
-      plant: []
+      stock: []
     }
   })
 }

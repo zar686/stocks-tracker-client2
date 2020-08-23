@@ -1,19 +1,16 @@
 @import '~bootstrap/scss/bootstrap';
 
-$background-color: #dbffe2;
-$button-color: #aee8bb;
+$background-color: gray;
+$button-color: white;
 $hover-font-color: #fff;
-$plantiful-font-color: #61ad6f;
 $text-color: #000;
 
 * {
-  font-weight: lighter;
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
   user-select: none;
 }
 
 .auth-btns {
-  margin: .5%;
   position: absolute;
   right: 0;
   top: 0;
@@ -29,7 +26,7 @@ button {
   // width: 50%;
 
   &:hover {
-    background-color: $plantiful-font-color;
+    background-color: black;
     color: $hover-font-color;
   }
 }
@@ -80,12 +77,12 @@ body {
   width: 50%;
 }
 
-.create-plant {
+.create-stock {
   margin-left: 200px;
   width: 50%;
 }
 
-.destroy-plant, {
+.destroy-stock, {
   background-color: $button-color;
   border: 0;
   border-radius: 8px;
@@ -111,13 +108,13 @@ form {
 }
 
 h1 {
-  color: $plantiful-font-color;
+  color: white;
   font-weight: lighter;
   letter-spacing: 15px;
   position: sticky;
 }
 
-#index-plants {
+#index-stocks {
   margin: 15px;
   margin-bottom: 5px;
   margin-left: 225px;
@@ -140,7 +137,7 @@ h1 {
 
   &:focus {
     // border of form field clicked on changes color:
-    border: 2px solid $plantiful-font-color;
+    border: 2px solid black;
   }
 }
 
@@ -159,13 +156,13 @@ h1 {
 }
 
 ::placeholder {
-  color: $plantiful-font-color;
+  color: black;
 }
 
-.plant-collection {
+.stock-list {
   background: $hover-font-color;
   border: .1px;
-  border-color: $plantiful-font-color;
+  border-color: black;
   border-radius: 8px;
   border-style: solid;
   margin: 10px;
@@ -192,8 +189,7 @@ h1 {
 }
 
 .sign-in {
-  // border: 2px solid $plantiful-font-color;
-  // cursor: pointer;
+
   float: left;
   height: 60px;
   line-height: 40px;
@@ -202,31 +198,21 @@ h1 {
 
 
   &.unauth-form {
-    // background: $plantiful-font-color;
     box-sizing: border-box;
     clear: both;
     cursor: pointer;
     height: 400px;
     padding: 40px;
     width: 100%;
-    //width: 50%;
   }
 }
 
-// .authenticated {
-//   align-items: center;
-//   display: flex;
-//   flex-flow: column wrap;
-//   justify-content: center;
-//   position: relative;
-// }
-//
 .unauthenticated {
-  display: table;
-  justify-content: center;
-  position: relative;
+    display: table;
+    justify-content: center;
+    position: relative;
 }
 
-.update-plant {
+.update-stock {
   margin-left: 45px;
 }
