@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title> Azam's Investments </title>
+      <title> Stocks Tracker </title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -10,74 +10,79 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <!-- <script>
+      $(document).ready(function(){
+        $('.sign-in').hide()
+        $('.already-have-account').css("background", "none")
+      })
+    </script> -->
     </head>
 
     <body>
-      <h1>Trillionaires Stock List</h1>
+      <h1>Stock Portfolio</h1>
 
       <p id="message"></p>
 
-      <div class="unauthenticated">
-        <label id="label1"> Sign up to track </label>
+      <div class="unauthenticated container" id="unauthenticated">
+        <!-- <div class="create-account">create an account</div>
+        <div class="already-have-account">sign in</div> -->
 
-        <form id="sign-up">
-          <input name="credentials[email]" placeholder="email here" type="email">
-          <input name="credentials[password]" placeholder="password here" type="password">
-          <input name="credentials[password_confirmation]" placeholder="confirm password here" type="password">
-          <button type="submit">Sign Up</button>
-        </form>
-
-        <form id="sign-in">
-          <input name="credentials[email]" placeholder="email here" type="email">
-          <input name="credentials[password]" placeholder="password here" type="password">
-          <button type="submit">Sign In</button>
-        </form>
+        <!-- sign up form and button -->
+        <div class="column">
+          <form class="sign-up unauth-form" id="sign-up">
+            <input name="credentials[email]" placeholder="e-mail" type="text" class="input">
+            <input name="credentials[password]" placeholder="password" type="password" class="input">
+            <input name="credentials[password_confirmation]" placeholder="confirm password" type="password" class="input"><br>
+            <button type="submit">SIGN UP</button>
+          </form>
       </div>
 
-      <div class="authenticated">
-        <form id="change-password">
-          <input name="passwords[old]" placeholder="old password" type="password">
-          <input name="passwords[new]" placeholder="new password" type="password">
-          <button type="submit">Change Password</button>
-        </form>
-
-        <form id="sign-out">
-          <button type="submit">Sign Out</button>
-        </form>
-
-        <p id="player-message"></p>
-
-
-      <form id="create-game">
-        <button type="submit">create list</button>
-      </form>
-
-      <div class="container">
-      <h1 class="display-4 text-center py-1">Stocks List</h1>
-
-      <div class="jumbotron p-3 shadow-sm">
-        <form id="create-form" action="/create-item" method="POST">
-          <div class="d-flex align-items-center">
-            <input id="create-field" name="item" autofocus autocomplete="off" class="form-control mr-3" type="text" style="flex: 1;">
-            <button class="btn btn-primary">Add New Item</button>
-          </div>
+      <!-- sign in form and button -->
+      <div class="column">
+        <form class="sign-in unauth-form" id="sign-in">
+        <input name="credentials[email]" placeholder="e-mail" type="text" class="input">
+        <input name="credentials[password]" placeholder="password" type="password" class="input"><br>
+        <button type="submit">SIGN IN</button>
         </form>
       </div>
-
-      <ul id="item-list" class="list-group pb-5">
-
-      </ul>
 
     </div>
 
-    <script>
-      let items = ${JSON.stringify(items)}
-    </script>
+    <div class="authenticated" id="authenticated">
+      <div class="auth-btns">
 
+        <!-- change password form and button -->
+        <form class="change-password btn" id="change-password">
+          <input name="passwords[old]" placeholder="old password" type="password" class="input-change-password">
+          <input name="passwords[new]" placeholder="new password" type="password" class="input-change-password">
+          <button type="submit">CHANGE PASSWORD</button>
+        </form>
 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="/browser.js"></script>
+        <!-- sign out button -->
+        <form class="sign-out btn" id="sign-out">
+          <button type="submit">SIGN OUT</button>
+        </form>
 
+      </div>
+      <div class="column">
+        <form class="create-stock" id="create-stock">
+          <input name="stock[name]" placeholder="Stock name (eg. Amazon)" type="text" class="input"><br>
+          <input name="stock[symbol]" placeholder="Stock symbol (eg. AMZN)" type="text" class="input"><br>
+          <input name="stock[quantity]" placeholder="Shares Bought (eg. 10)" type="number" class="input"><br>
+          <input name="stock[price]" placeholder="Price per share (eg. $2,500)" type="number" class="input"><br>
+          <input name="stock[reason]" placeholder="Why are you buying this stock? (eg. Jeff Bezos is dope)" type="text" class="input"><br>
+          <button id="add-stock" type="submit">add new stock</button>
+        </form>
+      </div>
 
-    </body>
+      <main>
+        <div class="column">
+          <button id="index-stocks">see all stocks</button>
+          <div id="content" class="content"></div>
+        </div>
+      </main>
+
+    </div>
+
+  </body>
 </html>
