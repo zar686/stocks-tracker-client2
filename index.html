@@ -24,14 +24,16 @@
       <p id="message"></p>
 
       <div class="unauthenticated container" id="unauthenticated">
+        <!-- <div class="create-account">create an account</div>
+        <div class="already-have-account">sign in</div> -->
 
         <!-- sign up form and button -->
         <div class="column">
           <form class="sign-up unauth-form" id="sign-up">
-            <input name="credentials[email]" placeholder="e-mail" type="text" class="input">
+            <input name="credentials[email]" placeholder="E-mail" type="text" class="input">
             <input name="credentials[password]" placeholder="password" type="password" class="input">
             <input name="credentials[password_confirmation]" placeholder="confirm password" type="password" class="input"><br>
-            <button type="submit">SIGN UP</button>
+            <button type="submit">sign up</button>
           </form>
       </div>
 
@@ -40,11 +42,11 @@
         <form class="sign-in unauth-form" id="sign-in">
         <input name="credentials[email]" placeholder="E-mail" type="text" class="input">
         <input name="credentials[password]" placeholder="password" type="password" class="input"><br>
-        <button type="submit">SIGN IN</button>
+        <button type="submit">sign in</button>
         </form>
       </div>
 
-      </div>
+    </div>
 
     <div class="authenticated" id="authenticated">
       <div class="auth-btns">
@@ -53,16 +55,15 @@
         <form class="change-password btn" id="change-password">
           <br /><input name="passwords[old]" placeholder="old password" type="password" class="input-change-password">
           <br /><input name="passwords[new]" placeholder="new password" type="password" class="input-change-password">
-          <br /><button type="submit">CHANGE PASSWORD</button>
+          <br /><button type="submit">change password</button>
         </form>
 
         <!-- sign out button -->
         <form class="sign-out btn" id="sign-out">
-          <br /><button type="submit">SIGN OUT</button>
+          <button type="submit">>sign out</button>
         </form>
 
       </div>
-
       <div class="column">
         <form class="create-stock" id="create-stock">
           <input name="stock[name]" placeholder="Stock name (eg. Amazon)" type="text" class="input"><br>

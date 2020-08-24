@@ -1,5 +1,3 @@
-#!/bin/sh
-
 curl "http://localhost:4741/stocks" \
   --include \
   --request GET \
